@@ -54,3 +54,5 @@ void Opponent::Draw(graphics::Image& gameScreen) {
     }
   }
 }
+
+

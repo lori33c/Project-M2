@@ -25,4 +25,11 @@ class Opponent {
         void Draw(graphics::Image& gameScreen);
 };
 
+class OpponentProjectile {
+    // 1. Create Opponent Projectile
+    // Create data members to represent location (x,y)
+    // Create two constant data members kWidth_ and kHeight_
+    // Create Draw Function
+}
+
 #endif

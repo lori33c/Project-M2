@@ -5,6 +5,7 @@
 #include "opponent.h"
 
 int main() {
+  // 5. Add it all together in main (Driver)
   // Create game screen
   graphics::Image gameScreen(800, 600);
 
