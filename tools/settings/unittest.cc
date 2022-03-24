@@ -109,7 +109,7 @@ TEST(OpponentProjectile, Draw) {
   OpponentProjectileDraw();
 }
 
-// Player Unittests
+Player Unittests
 
 TEST(Player, DefaultConstructor) {
   Player my_player;
