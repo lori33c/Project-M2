@@ -50,7 +50,7 @@ void Opponent::Draw(graphics::Image& gameScreen, std::string opponent_image_file
       graphics::Color color = opponent.GetColor(i,j);
 
       // Set the color of the pixel on the screen
-      gameScreen.SetColor(x_ - kWidth_/2 + i, y_ - kHeight_/2 + j, color);
+      gameScreen.SetColor(x_ + i, y_ + j, color);
     }
   }
 }

@@ -41,7 +41,7 @@ void Player::Draw(graphics::Image& gameScreen, std::string player_image_file){
   for(int i = 0; i < kWidth; i++){
     for(int j = 0; j < kHeight; j++){
       graphics::Color color = player.GetColor(i,j);
-      gameScreen.SetColor(x_ - kWidth/2 + i, y_ - kHeight/2 + j, color);
+      gameScreen.SetColor(x_ + i, y_ + j, color);
     }
   }
 }
@@ -54,13 +54,22 @@ bool Player::IntersectsWith(Opponent opp) {
     int opp_x = opp.GetX();
     int opp_y = opp.GetY();
 
-    if (opp_x - opp_w/2 > x_ - kWidth/2 || opp_x - opp_w/2 < x_ + kWidth/2) {
-      return true;
-    } 
+    int playerLeft = x_;
+    int playerRight = playerLeft + kWidth;
+    int playerTop = y_;
+    int playerBottom = playerTop + kHeight;
 
-    if (opp_y - opp_h/2 > y_ - kHeight/2 || opp_y - opp_h/2 < y_ + kHeight/2) {
+    int oppLeft = opp_x;
+    int oppRight = oppLeft + opp_w;
+    int oppTop = opp_y;
+    int oppBottom = oppTop + opp_h;
+
+    if (playerRight > oppLeft && 
+    playerLeft < oppRight &&
+    playerTop < oppBottom &&
+    playerBottom > oppTop) {
       return true;
-    } 
+    }
 
     return intersects;
 }
