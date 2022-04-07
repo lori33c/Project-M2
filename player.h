@@ -19,7 +19,7 @@ class Player{
         int GetWidth();
         int GetHeight();
         void DrawPlayerImage(std::string player_image_file);
-        void Draw(graphics::Image& gameScreen);
+        void Draw(graphics::Image& gameScreen, std::string player_image_file);
 };
 #endif
 

@@ -3,6 +3,7 @@
 #include <vector>
 #include "cpputils/graphics/image.h"
 #include "opponent.h"
+#include "player.h"
 
 int main() {
   // Filename Variables
@@ -27,6 +28,8 @@ int main() {
   // Call each Draw member function and pass the game screen as argument
   Opponent evilCat(400, 300);
   evilCat.Draw(gameScreen, opponent_image_file);
+  Player goodCat(400, 300);
+  goodCat.Draw(gameScreen, player_image_file);
   gameScreen.ShowUntilClosed();
 
   return 0;

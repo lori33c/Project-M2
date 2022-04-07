@@ -30,10 +30,10 @@ void Player::DrawPlayerImage(std::string player_image_file){
   player_image.SaveImageBmp(player_image_file);
 }
   // draw member function
-void Player::Draw(graphics::Image& gameScreen){
-  DrawPlayerImage("player.bmp");
+void Player::Draw(graphics::Image& gameScreen, std::string player_image_file){
+  DrawPlayerImage(player_image_file);
   graphics::Image player;
-  player.Load("player.bmp");
+  player.Load(player_image_file);
 
   //moving location of player on screen
   for(int i = 0; i < kWidth; i++){
