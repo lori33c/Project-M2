@@ -22,7 +22,7 @@ class Opponent {
         void SetX(int x);
         void SetY(int y);
         void DrawOppImage(std::string opponent_image_file);
-        void Draw(graphics::Image& gameScreen);
+        void Draw(graphics::Image& gameScreen, std::string opponent_image_file);
 };
 
 class OpponentProjectile {
@@ -30,6 +30,6 @@ class OpponentProjectile {
     // Create data members to represent location (x,y)
     // Create two constant data members kWidth_ and kHeight_
     // Create Draw Function
-}
+};
 
 #endif

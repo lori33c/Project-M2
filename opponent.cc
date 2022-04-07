@@ -36,12 +36,12 @@ void Opponent::DrawOppImage(std::string opponent_image_file) {
   Opponent_image.SaveImageBmp(opponent_image_file);
 }
 
-void Opponent::Draw(graphics::Image& gameScreen) {
+void Opponent::Draw(graphics::Image& gameScreen, std::string opponent_image_file) {
   // Pass by reference 
   // So any changes to image is reflected
-  DrawOppImage("opponent.bmp");
+  DrawOppImage(opponent_image_file);
   graphics::Image opponent;
-  opponent.Load("opponent.bmp");
+  opponent.Load(opponent_image_file);
 
   //Draw Opponent on location of screen
   for (int i = 0; i < kWidth_; i++){

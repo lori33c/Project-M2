@@ -26,8 +26,8 @@ int main() {
 
   // Call each Draw member function and pass the game screen as argument
   Opponent evilCat(400, 300);
-  evilCat.Draw(gameScreen);
+  evilCat.Draw(gameScreen, opponent_image_file);
   gameScreen.ShowUntilClosed();
-  
+
   return 0;
 }
