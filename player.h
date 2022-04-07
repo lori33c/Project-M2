@@ -4,6 +4,7 @@
 
 #include "cpputils/graphics/image.h"
 #include <string>
+#include "opponent.h"
 class Player{
     private:
         int x_, y_;
@@ -20,6 +21,7 @@ class Player{
         int GetHeight();
         void DrawPlayerImage(std::string player_image_file);
         void Draw(graphics::Image& gameScreen, std::string player_image_file);
+        bool IntersectsWith(Opponent opp);
 };
 #endif
 

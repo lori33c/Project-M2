@@ -1,6 +1,8 @@
 // Similar to the opponent.cc (look there for reference)
 #include "player.h"
+#include "opponent.h"
 #include <string>
+
 Player::Player() : x_(0), y_(0){};
 Player::Player(int x,int y) : x_(x), y_(y){
 }
@@ -43,8 +45,27 @@ void Player::Draw(graphics::Image& gameScreen, std::string player_image_file){
     }
   }
 }
-  // 3. Create IntersectsWith(Opponent) and
+
+  // 3. Create IntersectsWith(Opponent) 
+bool Player::IntersectsWith(Opponent opp) {
+    bool intersects = false;
+    int opp_w = opp.GetWidth();
+    int opp_h = opp.GetHeight();
+    int opp_x = opp.GetX();
+    int opp_y = opp.GetY();
+
+    if (opp_x - opp_w/2 > x_ - kWidth/2 || opp_x - opp_w/2 < x_ + kWidth/2) {
+      return true;
+    } 
+
+    if (opp_y - opp_h/2 > y_ - kHeight/2 || opp_y - opp_h/2 < y_ + kHeight/2) {
+      return true;
+    } 
+
+    return intersects;
+}
   // IntersectsWith(OpponentProjectile)
+
 
 
 
