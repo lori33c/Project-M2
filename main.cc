@@ -31,6 +31,6 @@ int main() {
   Player goodCat(400, 300);
   goodCat.Draw(gameScreen, player_image_file);
 
-  // gameScreen.ShowUntilClosed();
+  gameScreen.ShowUntilClosed();
   return 0;
 }

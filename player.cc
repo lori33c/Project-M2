@@ -48,7 +48,7 @@ void Player::Draw(graphics::Image& gameScreen, std::string player_image_file){
 
   // 3. Create IntersectsWith(Opponent) 
 bool Player::IntersectsWith(Opponent opp) {
-    bool intersects = false;
+    bool intersects = true;
     int opp_w = opp.GetWidth();
     int opp_h = opp.GetHeight();
     int opp_x = opp.GetX();
@@ -64,11 +64,9 @@ bool Player::IntersectsWith(Opponent opp) {
     int oppTop = opp_y;
     int oppBottom = oppTop + opp_h;
 
-    if (playerRight > oppLeft && 
-    playerLeft < oppRight &&
-    playerTop < oppBottom &&
-    playerBottom > oppTop) {
-      return true;
+    if (playerRight < oppLeft || playerBottom < oppTop && 
+    oppRight < playerLeft || oppBottom < playerTop) {
+      return false;
     }
 
     return intersects;
