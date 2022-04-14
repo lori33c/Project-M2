@@ -32,7 +32,11 @@ void Player::DrawPlayerImage(std::string player_image_file){
   player_image.SaveImageBmp(player_image_file);
 }
   // draw member function
-void Player::Draw(graphics::Image& gameScreen, std::string player_image_file){
+void Player::Draw(graphics::Image& gameScreen){
+  std::string player_image_file;
+  std::cout << "Please provide player image filename: ";
+  std::cin >> player_image_file;
+
   DrawPlayerImage(player_image_file);
   graphics::Image player;
   player.Load(player_image_file);
@@ -71,8 +75,8 @@ bool Player::IntersectsWith(OpponentProjectile OppProj) {
     bool intersects = false;
     int OppProj_w = OppProj.GetWidth();
     int OppProj_h = OppProj.GetHeight();
-    int OppProj_x = OppProj.Getx();
-    int OppProj_y = OppProj.Gety();
+    int OppProj_x = OppProj.GetX();
+    int OppProj_y = OppProj.GetY();
 
     int playerLeft = x_;
     int playerRight = playerLeft + kWidth;
@@ -90,10 +94,10 @@ bool Player::IntersectsWith(OpponentProjectile OppProj) {
 // 4. Create PLayerProjectile class
 PlayerProjectile::PlayerProjectile() : x_(0), y_(0){}
 PlayerProjectile::PlayerProjectile(int x, int y) : x_(x), y_(y) {}
-void PlayerProjectile::Setx(int x) {x_ = x;}
-void PlayerProjectile::Sety(int y) {y_ = y;}
-int PlayerProjectile::Getx() {return x_;}
-int PlayerProjectile::Gety() {return y_;}
+void PlayerProjectile::SetX(int x) {x_ = x;}
+void PlayerProjectile::SetY(int y) {y_ = y;}
+int PlayerProjectile::GetX() {return x_;}
+int PlayerProjectile::GetY() {return y_;}
 int PlayerProjectile::GetWidth() { return kWidth_; }
 int PlayerProjectile::GetHeight() { return kHeight_; }
 void PlayerProjectile::DrawPlaProjImage(std::string player_projectile_file) {
@@ -102,7 +106,11 @@ void PlayerProjectile::DrawPlaProjImage(std::string player_projectile_file) {
 	PlayerProjectile_image.DrawCircle(PlaProj_size/2, PlaProj_size/2, PlaProj_size/2, 0, 255, 0);
 	PlayerProjectile_image.SaveImageBmp(player_projectile_file);
 }
-void PlayerProjectile::Draw(graphics::Image& gameScreen, std::string player_projectile_file) {
+void PlayerProjectile::Draw(graphics::Image& gameScreen) {
+  std::string player_projectile_file;
+  std::cout << "Please provide player projectile image filename: ";
+  std::cin >> player_projectile_file;
+
   DrawPlaProjImage(player_projectile_file);
   graphics::Image PlayerProjectile;
   PlayerProjectile.Load(player_projectile_file);
@@ -113,3 +121,25 @@ void PlayerProjectile::Draw(graphics::Image& gameScreen, std::string player_proj
     }
   }
 }
+
+bool PlayerProjectile::IntersectsWith(Opponent opp) {
+    bool intersects = true;
+    int opp_w = opp.GetWidth();
+    int opp_h = opp.GetHeight();
+    int opp_x = opp.GetX();
+    int opp_y = opp.GetY();
+
+    int oppProjLeft = x_;
+    int oppProjRight = x_ + kWidth_;
+    int oppProjTop = y_;
+    int oppProjBottom = y_ + kHeight_;
+
+    int oppLeft = opp_x;
+    int oppRight = opp_x + opp_w;
+    int oppTop = opp_y;
+    int oppBottom = oppTop + opp_h;
+
+    return !(oppProjLeft > oppRight || oppProjBottom < oppTop || oppRight < oppProjLeft || oppBottom < oppProjTop);
+}
+
+// No member function "IntersectsWith" in "Player Projectile"

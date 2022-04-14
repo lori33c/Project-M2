@@ -20,7 +20,7 @@ class Player{
         int GetWidth();
         int GetHeight();
         void DrawPlayerImage(std::string player_image_file);
-        void Draw(graphics::Image& gameScreen, std::string player_image_file);
+        void Draw(graphics::Image& gameScreen);
         bool IntersectsWith(Opponent opp);
         bool IntersectsWith(OpponentProjectile OppProj);
 };
@@ -34,14 +34,15 @@ class PlayerProjectile {
     public:
     PlayerProjectile();
     PlayerProjectile(int x, int y);
-    int Getx();
-    int Gety();
+    int GetX();
+    int GetY();
     int GetWidth();
     int GetHeight();
-    void Setx(int x);
-    void Sety(int y);
+    void SetX(int x);
+    void SetY(int y);
     void DrawPlaProjImage(std::string player_projectile_file);
-    void Draw(graphics::Image& gameScreen, std::string player_projectile_file);
+    void Draw(graphics::Image& gameScreen);
+    bool IntersectsWith(Opponent opp);
 };
 #endif
 

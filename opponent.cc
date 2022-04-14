@@ -36,9 +36,14 @@ void Opponent::DrawOppImage(std::string opponent_image_file) {
   Opponent_image.SaveImageBmp(opponent_image_file);
 }
 
-void Opponent::Draw(graphics::Image& gameScreen, std::string opponent_image_file) {
+void Opponent::Draw(graphics::Image& gameScreen) {
   // Pass by reference 
   // So any changes to image is reflected
+
+  std::string opponent_image_file;
+  std::cout << "Please provide opponent image filename: ";
+  std::cin >> opponent_image_file;
+
   DrawOppImage(opponent_image_file);
   graphics::Image opponent;
   opponent.Load(opponent_image_file);
@@ -57,10 +62,10 @@ void Opponent::Draw(graphics::Image& gameScreen, std::string opponent_image_file
 
 OpponentProjectile::OpponentProjectile() : x_(0), y_(0){}
 OpponentProjectile::OpponentProjectile(int x, int y) : x_(x), y_(y) {}
-void OpponentProjectile::Setx(int x) {x_ = x;}
-void OpponentProjectile::Sety(int y) {y_ = y;}
-int OpponentProjectile::Getx() {return x_;}
-int OpponentProjectile::Gety() {return y_;}
+void OpponentProjectile::SetX(int x) {x_ = x;}
+void OpponentProjectile::SetY(int y) {y_ = y;}
+int OpponentProjectile::GetX() {return x_;}
+int OpponentProjectile::GetY() {return y_;}
 int OpponentProjectile::GetWidth() { return kWidth_; }
 int OpponentProjectile::GetHeight() { return kHeight_; }
 void OpponentProjectile::DrawOppProjImage(std::string opponent_projectile_file) {
@@ -69,7 +74,11 @@ void OpponentProjectile::DrawOppProjImage(std::string opponent_projectile_file) 
 	OpponentProjectile_image.DrawCircle(OppProj_size/2, OppProj_size/2, OppProj_size/2, 255, 0, 0);
 	OpponentProjectile_image.SaveImageBmp(opponent_projectile_file);
 }
-void OpponentProjectile::Draw(graphics::Image& gameScreen, std::string opponent_projectile_file) {
+void OpponentProjectile::Draw(graphics::Image& gameScreen) {
+  std::string opponent_projectile_file;
+  std::cout << "Please provide opponent projectile image filename: ";
+  std::cin >> opponent_projectile_file;
+  
   DrawOppProjImage(opponent_projectile_file);
   graphics::Image OpponentProjectile;
   OpponentProjectile.Load(opponent_projectile_file);

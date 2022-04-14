@@ -22,14 +22,10 @@ class Opponent {
         void SetX(int x);
         void SetY(int y);
         void DrawOppImage(std::string opponent_image_file);
-        void Draw(graphics::Image& gameScreen, std::string opponent_image_file);
+        void Draw(graphics::Image& gameScreen);
 };
 
 class OpponentProjectile {
-    // 1. Create Opponent Projectile
-    // Create data members to represent location (x,y)
-    // Create two constant data members kWidth_ and kHeight_
-    // Create Draw Function
     private:
     int x_;
     int y_;
@@ -38,14 +34,14 @@ class OpponentProjectile {
     public:
     OpponentProjectile();
     OpponentProjectile(int x, int y);
-    int Getx();
-    int Gety();
+    int GetX();
+    int GetY();
     int GetWidth();
     int GetHeight();
-    void Setx(int x);
-    void Sety(int y);
+    void SetX(int x);
+    void SetY(int y);
     void DrawOppProjImage(std::string opponent_projectile_file);
-    void Draw(graphics::Image& gameScreen, std::string opponent_projectile_file);
+    void Draw(graphics::Image& gameScreen);
 };
 
 #endif
