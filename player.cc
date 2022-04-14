@@ -64,14 +64,8 @@ bool Player::IntersectsWith(Opponent opp) {
     int oppTop = opp_y;
     int oppBottom = oppTop + opp_h;
 
-    if (playerRight < oppLeft || playerBottom < oppTop && 
-    oppRight < playerLeft || oppBottom < playerTop) {
-      return false;
-    }
-
-    return intersects;
+    return !(playerLeft > oppRight || playerBottom < oppTop || oppRight < playerLeft || oppBottom < playerTop);
 }
-  // IntersectsWith(OpponentProjectile)
 
 bool Player::IntersectsWith(OpponentProjectile OppProj) {
     bool intersects = false;
@@ -90,16 +84,8 @@ bool Player::IntersectsWith(OpponentProjectile OppProj) {
     int OpponentProjectileTop = OppProj_y;
     int OpponentProjectileBottom = OpponentProjectileTop + OppProj_h;
 
-    if ((playerRight > OpponentProjectileLeft && 
-    playerLeft < OpponentProjectileRight) ||
-    (playerTop < OpponentProjectileBottom &&
-    playerBottom > OpponentProjectileTop)) {
-      return true;
-    }
-
-    return intersects;
+    return !(playerLeft > OpponentProjectileRight || playerBottom < OpponentProjectileTop || OpponentProjectileRight < playerLeft || OpponentProjectileBottom < playerTop);
 }
-
 
 // 4. Create PLayerProjectile class
 PlayerProjectile::PlayerProjectile() : x_(0), y_(0){}
