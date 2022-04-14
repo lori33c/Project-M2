@@ -6,9 +6,12 @@
 Player::Player() : x_(0), y_(0){};
 Player::Player(int x,int y) : x_(x), y_(y){
 }
-// 2. Create Player class
 void Player::SetX(int x){x_ = x;}
 void Player::SetY(int y){y_ = y;}
+int Player::GetX() { return x_; }
+int Player::GetY() { return y_; }
+int Player::GetWidth() { return kWidth; }
+int Player::GetHeight() { return kHeight; }
 void Player::DrawPlayerImage(std::string player_image_file){
   const int size = 50;
   graphics::Image player_image(size, size);
