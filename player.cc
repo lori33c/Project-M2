@@ -73,7 +73,57 @@ bool Player::IntersectsWith(Opponent opp) {
 }
   // IntersectsWith(OpponentProjectile)
 
+bool Player::IntersectsWith(OpponentProjectile OppProj) {
+    bool intersects = false;
+    int OppProj_w = OppProj.GetWidth();
+    int OppProj_h = OppProj.GetHeight();
+    int OppProj_x = OppProj.Getx();
+    int OppProj_y = OppProj.Gety();
 
+    int playerLeft = x_;
+    int playerRight = playerLeft + kWidth;
+    int playerTop = y_;
+    int playerBottom = playerTop + kHeight;
+
+    int OpponentProjectileLeft = OppProj_x;
+    int OpponentProjectileRight = OpponentProjectileLeft + OppProj_w;
+    int OpponentProjectileTop = OppProj_y;
+    int OpponentProjectileBottom = OpponentProjectileTop + OppProj_h;
+
+    if ((playerRight > OpponentProjectileLeft && 
+    playerLeft < OpponentProjectileRight) ||
+    (playerTop < OpponentProjectileBottom &&
+    playerBottom > OpponentProjectileTop)) {
+      return true;
+    }
+
+    return intersects;
+}
 
 
 // 4. Create PLayerProjectile class
+PlayerProjectile::PlayerProjectile() : x_(0), y_(0){}
+PlayerProjectile::PlayerProjectile(int x, int y) : x_(x), y_(y) {}
+void PlayerProjectile::Setx(int x) {x_ = x;}
+void PlayerProjectile::Sety(int y) {y_ = y;}
+int PlayerProjectile::Getx() {return x_;}
+int PlayerProjectile::Gety() {return y_;}
+int PlayerProjectile::GetWidth() { return kWidth_; }
+int PlayerProjectile::GetHeight() { return kHeight_; }
+void PlayerProjectile::DrawPlaProjImage(std::string player_projectile_file) {
+  const int PlaProj_size = 5;
+	graphics::Image PlayerProjectile_image(PlaProj_size, PlaProj_size);
+	PlayerProjectile_image.DrawCircle(PlaProj_size/2, PlaProj_size/2, PlaProj_size/2, 0, 255, 0);
+	PlayerProjectile_image.SaveImageBmp(player_projectile_file);
+}
+void PlayerProjectile::Draw(graphics::Image& gameScreen, std::string player_projectile_file) {
+  DrawPlaProjImage(player_projectile_file);
+  graphics::Image PlayerProjectile;
+  PlayerProjectile.Load(player_projectile_file);
+  for (int i = 0; i < kWidth_; i++){
+    for (int j = 0; j < kHeight_; j++){
+      graphics::Color color = PlayerProjectile.GetColor(i,j);
+      gameScreen.SetColor(x_ + i, y_ + j, color);
+    }
+  }
+}

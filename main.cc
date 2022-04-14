@@ -30,7 +30,10 @@ int main() {
   evilCat.Draw(gameScreen, opponent_image_file);
   Player goodCat(400, 300);
   goodCat.Draw(gameScreen, player_image_file);
-
+  OpponentProjectile OppProj(500, 400);
+  OppProj.Draw(gameScreen, opponent_projectile_file);
+  PlayerProjectile PlaProj(300, 200);
+  PlaProj.Draw(gameScreen, player_projectile_file);
   gameScreen.ShowUntilClosed();
   return 0;
 }

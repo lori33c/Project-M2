@@ -55,4 +55,28 @@ void Opponent::Draw(graphics::Image& gameScreen, std::string opponent_image_file
   }
 }
 
-
+OpponentProjectile::OpponentProjectile() : x_(0), y_(0){}
+OpponentProjectile::OpponentProjectile(int x, int y) : x_(x), y_(y) {}
+void OpponentProjectile::Setx(int x) {x_ = x;}
+void OpponentProjectile::Sety(int y) {y_ = y;}
+int OpponentProjectile::Getx() {return x_;}
+int OpponentProjectile::Gety() {return y_;}
+int OpponentProjectile::GetWidth() { return kWidth_; }
+int OpponentProjectile::GetHeight() { return kHeight_; }
+void OpponentProjectile::DrawOppProjImage(std::string opponent_projectile_file) {
+  const int OppProj_size = 5;
+	graphics::Image OpponentProjectile_image(OppProj_size, OppProj_size);
+	OpponentProjectile_image.DrawCircle(OppProj_size/2, OppProj_size/2, OppProj_size/2, 255, 0, 0);
+	OpponentProjectile_image.SaveImageBmp(opponent_projectile_file);
+}
+void OpponentProjectile::Draw(graphics::Image& gameScreen, std::string opponent_projectile_file) {
+  DrawOppProjImage(opponent_projectile_file);
+  graphics::Image OpponentProjectile;
+  OpponentProjectile.Load(opponent_projectile_file);
+  for (int i = 0; i < kWidth_; i++){
+    for (int j = 0; j < kHeight_; j++){
+      graphics::Color color = OpponentProjectile.GetColor(i,j);
+      gameScreen.SetColor(x_ + i, y_ + j, color);
+    }
+  }
+}

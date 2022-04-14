@@ -30,6 +30,22 @@ class OpponentProjectile {
     // Create data members to represent location (x,y)
     // Create two constant data members kWidth_ and kHeight_
     // Create Draw Function
+    private:
+    int x_;
+    int y_;
+    const int kWidth_ = 5;
+    const int kHeight_ = 5;
+    public:
+    OpponentProjectile();
+    OpponentProjectile(int x, int y);
+    int Getx();
+    int Gety();
+    int GetWidth();
+    int GetHeight();
+    void Setx(int x);
+    void Sety(int y);
+    void DrawOppProjImage(std::string opponent_projectile_file);
+    void Draw(graphics::Image& gameScreen, std::string opponent_projectile_file);
 };
 
 #endif
