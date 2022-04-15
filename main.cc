@@ -30,13 +30,13 @@ int main() {
   goodCat.SetFile("player.bmp");
   goodCat.Draw(gameScreen);
   Opponent evilCat(200, 300);
-  goodCat.SetFile("opponent.bmp");
+  evilCat.SetFile("opponent.bmp");
   evilCat.Draw(gameScreen);
   PlayerProjectile PlaProj(300, 200);
-  goodCat.SetFile("playerprojectrile.bmp");
+  PlaProj.SetFile("playerprojectrile.bmp");
   PlaProj.Draw(gameScreen);
   OpponentProjectile OppProj(500, 400);
-  goodCat.SetFile("opponentprojectile.bmp");
+  OppProj.SetFile("opponentprojectile.bmp");
   OppProj.Draw(gameScreen);
   gameScreen.ShowUntilClosed();
   return 0;
