@@ -37,31 +37,24 @@ void Opponent::DrawOppImage(std::string opponent_image_file) {
 }
 
 void Opponent::Draw(graphics::Image& gameScreen) {
-  // Pass by reference 
-  // So any changes to image is reflected
-
-  std::string opponent_image_file;
-  std::cout << "Please provide opponent image filename: ";
-  std::cin >> opponent_image_file;
-
-  DrawOppImage(opponent_image_file);
-  graphics::Image opponent;
-  opponent.Load(opponent_image_file);
-
-  //Draw Opponent on location of screen
+  std::string opponent_file = "opponent.bmp";
+  
+  DrawOppImage(opponent_file);
+  graphics::Image Opponent;
+  Opponent.Load(opponent_file);
   for (int i = 0; i < kWidth_; i++){
-    for (int j = 0; j <kHeight_; j++) {
-      // For each pixel in opponent_image, get the color
-      graphics::Color color = opponent.GetColor(i,j);
-
-      // Set the color of the pixel on the screen
+    for (int j = 0; j < kHeight_; j++){
+      graphics::Color color = Opponent.GetColor(i,j);
       gameScreen.SetColor(x_ + i, y_ + j, color);
     }
   }
 }
 
 OpponentProjectile::OpponentProjectile() : x_(0), y_(0){}
-OpponentProjectile::OpponentProjectile(int x, int y) : x_(x), y_(y) {}
+OpponentProjectile::OpponentProjectile(int x, int y) {
+  x_ = x;
+  y_ = y;
+}
 void OpponentProjectile::SetX(int x) {x_ = x;}
 void OpponentProjectile::SetY(int y) {y_ = y;}
 int OpponentProjectile::GetX() {return x_;}
@@ -75,9 +68,7 @@ void OpponentProjectile::DrawOppProjImage(std::string opponent_projectile_file) 
 	OpponentProjectile_image.SaveImageBmp(opponent_projectile_file);
 }
 void OpponentProjectile::Draw(graphics::Image& gameScreen) {
-  std::string opponent_projectile_file;
-  std::cout << "Please provide opponent projectile image filename: ";
-  std::cin >> opponent_projectile_file;
+  std::string opponent_projectile_file = "opponentprojectile.bmp";
   
   DrawOppProjImage(opponent_projectile_file);
   graphics::Image OpponentProjectile;

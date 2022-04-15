@@ -12,7 +12,7 @@ class Player{
         const int kHeight = 50;
     public:
         Player();
-        Player(int x, int  y);
+        Player(int x, int y);
         void SetX(int x);
         void SetY(int y);
         int GetX();

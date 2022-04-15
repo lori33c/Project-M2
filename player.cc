@@ -4,7 +4,9 @@
 #include <string>
 
 Player::Player() : x_(0), y_(0){};
-Player::Player(int x,int y) : x_(x), y_(y){
+Player::Player(int x, int y) {
+  x_ = x;
+  y_ = y;
 }
 void Player::SetX(int x){x_ = x;}
 void Player::SetY(int y){y_ = y;}
@@ -36,9 +38,7 @@ void Player::DrawPlayerImage(std::string player_image_file){
 }
   // draw member function
 void Player::Draw(graphics::Image& gameScreen){
-  std::string player_image_file;
-  std::cout << "Please provide player image filename: ";
-  std::cin >> player_image_file;
+  std::string player_image_file = "player.bmp";
 
   DrawPlayerImage(player_image_file);
   graphics::Image player;
@@ -96,7 +96,10 @@ bool Player::IntersectsWith(OpponentProjectile OppProj) {
 
 // 4. Create PLayerProjectile class
 PlayerProjectile::PlayerProjectile() : x_(0), y_(0){}
-PlayerProjectile::PlayerProjectile(int x, int y) : x_(x), y_(y) {}
+PlayerProjectile::PlayerProjectile(int x, int y) {
+  x_ = x;
+  y_ = y;
+}
 void PlayerProjectile::SetX(int x) {x_ = x;}
 void PlayerProjectile::SetY(int y) {y_ = y;}
 int PlayerProjectile::GetX() {return x_;}
@@ -110,9 +113,7 @@ void PlayerProjectile::DrawPlaProjImage(std::string player_projectile_file) {
 	PlayerProjectile_image.SaveImageBmp(player_projectile_file);
 }
 void PlayerProjectile::Draw(graphics::Image& gameScreen) {
-  std::string player_projectile_file;
-  std::cout << "Please provide player projectile image filename: ";
-  std::cin >> player_projectile_file;
+  std::string player_projectile_file = "playerprojectile.bmp";
 
   DrawPlaProjImage(player_projectile_file);
   graphics::Image PlayerProjectile;

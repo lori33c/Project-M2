@@ -1,0 +1,17 @@
+[
+ {
+ "directory" : "/root/sandbox/Project-M2",
+ "command" : "clang++ -std=c++17 main.cc -o main",
+ "file" : "/root/sandbox/Project-M2/main.cc"
+ },
+ {
+ "directory" : "/root/sandbox/Project-M2",
+ "command" : "clang++ -std=c++17 player.cc -o main",
+ "file" : "/root/sandbox/Project-M2/player.cc"
+ },
+ {
+ "directory" : "/root/sandbox/Project-M2",
+ "command" : "clang++ -std=c++17 opponent.cc -o main",
+ "file" : "/root/sandbox/Project-M2/opponent.cc"
+ },
+]
