@@ -10,6 +10,7 @@ Player::Player(int x, int y) {
 }
 void Player::SetX(int x){x_ = x;}
 void Player::SetY(int y){y_ = y;}
+void Player::SetFile(std::string name){ file = name; }
 int Player::GetX() { return x_; }
 int Player::GetY() { return y_; }
 int Player::GetWidth() { return kWidth; }
@@ -38,11 +39,9 @@ void Player::DrawPlayerImage(std::string player_image_file){
 }
   // draw member function
 void Player::Draw(graphics::Image& gameScreen){
-  std::string player_image_file = "player.bmp";
-
-  DrawPlayerImage(player_image_file);
+  DrawPlayerImage(file);
   graphics::Image player;
-  player.Load(player_image_file);
+  player.Load(file);
 
   //moving location of player on screen
   for(int i = 0; i < kWidth; i++){
@@ -102,6 +101,7 @@ PlayerProjectile::PlayerProjectile(int x, int y) {
 }
 void PlayerProjectile::SetX(int x) {x_ = x;}
 void PlayerProjectile::SetY(int y) {y_ = y;}
+void PlayerProjectile::SetFile(std::string name){ file = name; }
 int PlayerProjectile::GetX() {return x_;}
 int PlayerProjectile::GetY() {return y_;}
 int PlayerProjectile::GetWidth() { return kWidth_; }
@@ -113,11 +113,9 @@ void PlayerProjectile::DrawPlaProjImage(std::string player_projectile_file) {
 	PlayerProjectile_image.SaveImageBmp(player_projectile_file);
 }
 void PlayerProjectile::Draw(graphics::Image& gameScreen) {
-  std::string player_projectile_file = "playerprojectile.bmp";
-
-  DrawPlaProjImage(player_projectile_file);
+  DrawPlaProjImage(file);
   graphics::Image PlayerProjectile;
-  PlayerProjectile.Load(player_projectile_file);
+  PlayerProjectile.Load(file);
   for (int i = 0; i < kWidth_; i++){
     for (int j = 0; j < kHeight_; j++){
       graphics::Color color = PlayerProjectile.GetColor(i,j);

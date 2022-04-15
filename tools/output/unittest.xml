@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="15" failures="0" disabled="0" errors="0" time="1.162" timestamp="2022-04-15T00:14:50.130" name="AllTests">
-  <testsuite name="Opponent" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.294" timestamp="2022-04-15T00:14:50.131">
-    <testcase name="DefaultConstructor" file="../settings/unittest.cc" line="10" status="run" result="completed" time="0" timestamp="2022-04-15T00:14:50.131" classname="Opponent" />
-    <testcase name="ParemterizedConstructor" file="../settings/unittest.cc" line="18" status="run" result="completed" time="0" timestamp="2022-04-15T00:14:50.132" classname="Opponent" />
-    <testcase name="Draw" file="../settings/unittest.cc" line="54" status="run" result="completed" time="0.293" timestamp="2022-04-15T00:14:50.132" classname="Opponent" />
+<testsuites tests="15" failures="0" disabled="0" errors="0" time="1.152" timestamp="2022-04-15T00:50:48.520" name="AllTests">
+  <testsuite name="Opponent" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.314" timestamp="2022-04-15T00:50:48.521">
+    <testcase name="DefaultConstructor" file="../settings/unittest.cc" line="10" status="run" result="completed" time="0" timestamp="2022-04-15T00:50:48.521" classname="Opponent" />
+    <testcase name="ParemterizedConstructor" file="../settings/unittest.cc" line="18" status="run" result="completed" time="0" timestamp="2022-04-15T00:50:48.522" classname="Opponent" />
+    <testcase name="Draw" file="../settings/unittest.cc" line="54" status="run" result="completed" time="0.313" timestamp="2022-04-15T00:50:48.522" classname="Opponent" />
   </testsuite>
-  <testsuite name="OpponentProjectile" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.279" timestamp="2022-04-15T00:14:50.427">
-    <testcase name="DefaultConstructor" file="../settings/unittest.cc" line="62" status="run" result="completed" time="0.001" timestamp="2022-04-15T00:14:50.427" classname="OpponentProjectile" />
-    <testcase name="ParemterizedConstructor" file="../settings/unittest.cc" line="70" status="run" result="completed" time="0" timestamp="2022-04-15T00:14:50.429" classname="OpponentProjectile" />
-    <testcase name="Draw" file="../settings/unittest.cc" line="106" status="run" result="completed" time="0.276" timestamp="2022-04-15T00:14:50.429" classname="OpponentProjectile" />
+  <testsuite name="OpponentProjectile" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.25" timestamp="2022-04-15T00:50:48.836">
+    <testcase name="DefaultConstructor" file="../settings/unittest.cc" line="62" status="run" result="completed" time="0" timestamp="2022-04-15T00:50:48.836" classname="OpponentProjectile" />
+    <testcase name="ParemterizedConstructor" file="../settings/unittest.cc" line="70" status="run" result="completed" time="0" timestamp="2022-04-15T00:50:48.836" classname="OpponentProjectile" />
+    <testcase name="Draw" file="../settings/unittest.cc" line="106" status="run" result="completed" time="0.249" timestamp="2022-04-15T00:50:48.836" classname="OpponentProjectile" />
   </testsuite>
-  <testsuite name="Player" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0.288" timestamp="2022-04-15T00:14:50.708">
-    <testcase name="DefaultConstructor" file="../settings/unittest.cc" line="114" status="run" result="completed" time="0" timestamp="2022-04-15T00:14:50.708" classname="Player" />
-    <testcase name="ParemterizedConstructor" file="../settings/unittest.cc" line="122" status="run" result="completed" time="0" timestamp="2022-04-15T00:14:50.708" classname="Player" />
-    <testcase name="Draw" file="../settings/unittest.cc" line="158" status="run" result="completed" time="0.287" timestamp="2022-04-15T00:14:50.708" classname="Player" />
-    <testcase name="IntersectsWithOpponent" file="../settings/unittest.cc" line="164" status="run" result="completed" time="0" timestamp="2022-04-15T00:14:50.996" classname="Player" />
-    <testcase name="IntersectsWithOpponentProjectile" file="../settings/unittest.cc" line="188" status="run" result="completed" time="0" timestamp="2022-04-15T00:14:50.996" classname="Player" />
+  <testsuite name="Player" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0.33" timestamp="2022-04-15T00:50:49.086">
+    <testcase name="DefaultConstructor" file="../settings/unittest.cc" line="114" status="run" result="completed" time="0" timestamp="2022-04-15T00:50:49.086" classname="Player" />
+    <testcase name="ParemterizedConstructor" file="../settings/unittest.cc" line="122" status="run" result="completed" time="0" timestamp="2022-04-15T00:50:49.087" classname="Player" />
+    <testcase name="Draw" file="../settings/unittest.cc" line="158" status="run" result="completed" time="0.329" timestamp="2022-04-15T00:50:49.087" classname="Player" />
+    <testcase name="IntersectsWithOpponent" file="../settings/unittest.cc" line="164" status="run" result="completed" time="0" timestamp="2022-04-15T00:50:49.416" classname="Player" />
+    <testcase name="IntersectsWithOpponentProjectile" file="../settings/unittest.cc" line="188" status="run" result="completed" time="0" timestamp="2022-04-15T00:50:49.417" classname="Player" />
   </testsuite>
-  <testsuite name="PlayerProjectile" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.295" timestamp="2022-04-15T00:14:50.997">
-    <testcase name="DefaultConstructor" file="../settings/unittest.cc" line="214" status="run" result="completed" time="0" timestamp="2022-04-15T00:14:50.997" classname="PlayerProjectile" />
-    <testcase name="ParemterizedConstructor" file="../settings/unittest.cc" line="222" status="run" result="completed" time="0" timestamp="2022-04-15T00:14:50.997" classname="PlayerProjectile" />
-    <testcase name="Draw" file="../settings/unittest.cc" line="257" status="run" result="completed" time="0.294" timestamp="2022-04-15T00:14:50.998" classname="PlayerProjectile" />
-    <testcase name="IntersectsWithOpponent" file="../settings/unittest.cc" line="263" status="run" result="completed" time="0" timestamp="2022-04-15T00:14:51.292" classname="PlayerProjectile" />
+  <testsuite name="PlayerProjectile" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.255" timestamp="2022-04-15T00:50:49.417">
+    <testcase name="DefaultConstructor" file="../settings/unittest.cc" line="214" status="run" result="completed" time="0" timestamp="2022-04-15T00:50:49.417" classname="PlayerProjectile" />
+    <testcase name="ParemterizedConstructor" file="../settings/unittest.cc" line="222" status="run" result="completed" time="0" timestamp="2022-04-15T00:50:49.417" classname="PlayerProjectile" />
+    <testcase name="Draw" file="../settings/unittest.cc" line="257" status="run" result="completed" time="0.254" timestamp="2022-04-15T00:50:49.417" classname="PlayerProjectile" />
+    <testcase name="IntersectsWithOpponent" file="../settings/unittest.cc" line="263" status="run" result="completed" time="0" timestamp="2022-04-15T00:50:49.672" classname="PlayerProjectile" />
   </testsuite>
 </testsuites>

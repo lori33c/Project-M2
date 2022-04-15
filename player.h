@@ -13,8 +13,10 @@ class Player{
     public:
         Player();
         Player(int x, int y);
+        std::string file;
         void SetX(int x);
         void SetY(int y);
+        void SetFile(std::string name);
         int GetX();
         int GetY();
         int GetWidth();
@@ -34,12 +36,14 @@ class PlayerProjectile {
     public:
     PlayerProjectile();
     PlayerProjectile(int x, int y);
+    std::string file;
     int GetX();
     int GetY();
     int GetWidth();
     int GetHeight();
     void SetX(int x);
     void SetY(int y);
+    void SetFile(std::string name);
     void DrawPlaProjImage(std::string player_projectile_file);
     void Draw(graphics::Image& gameScreen);
     bool IntersectsWith(Opponent opp);

@@ -13,6 +13,7 @@ class Opponent {
     public:
         Opponent();
         Opponent(int x, int y);
+        std::string file;
         // Accessors
         int GetX();
         int GetY();
@@ -21,6 +22,7 @@ class Opponent {
         // Mutators
         void SetX(int x);
         void SetY(int y);
+        void SetFile(std::string name);
         void DrawOppImage(std::string opponent_image_file);
         void Draw(graphics::Image& gameScreen);
 };
@@ -34,10 +36,12 @@ class OpponentProjectile {
     public:
     OpponentProjectile();
     OpponentProjectile(int x, int y);
+    std::string file;
     int GetX();
     int GetY();
     int GetWidth();
     int GetHeight();
+    void SetFile(std::string name);
     void SetX(int x);
     void SetY(int y);
     void DrawOppProjImage(std::string opponent_projectile_file);

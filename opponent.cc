@@ -12,7 +12,7 @@ int Opponent::GetHeight() { return kHeight_; }
 
 void Opponent::SetX(int x) { x_ = x; }
 void Opponent::SetY(int y) { y_ = y; }
-
+void Opponent::SetFile(std::string name){ file = name; }
 void Opponent::DrawOppImage(std::string opponent_image_file) {
   // 2. Create Opponent image (50 x 50 pixel)
   // 1. Create Opponent image (50 x 50 pixel)
@@ -37,11 +37,9 @@ void Opponent::DrawOppImage(std::string opponent_image_file) {
 }
 
 void Opponent::Draw(graphics::Image& gameScreen) {
-  std::string opponent_file = "opponent.bmp";
-  
-  DrawOppImage(opponent_file);
+  DrawOppImage(file);
   graphics::Image Opponent;
-  Opponent.Load(opponent_file);
+  Opponent.Load(file);
   for (int i = 0; i < kWidth_; i++){
     for (int j = 0; j < kHeight_; j++){
       graphics::Color color = Opponent.GetColor(i,j);
@@ -57,6 +55,7 @@ OpponentProjectile::OpponentProjectile(int x, int y) {
 }
 void OpponentProjectile::SetX(int x) {x_ = x;}
 void OpponentProjectile::SetY(int y) {y_ = y;}
+void OpponentProjectile::SetFile(std::string name) {file = name;}
 int OpponentProjectile::GetX() {return x_;}
 int OpponentProjectile::GetY() {return y_;}
 int OpponentProjectile::GetWidth() { return kWidth_; }
@@ -68,11 +67,9 @@ void OpponentProjectile::DrawOppProjImage(std::string opponent_projectile_file) 
 	OpponentProjectile_image.SaveImageBmp(opponent_projectile_file);
 }
 void OpponentProjectile::Draw(graphics::Image& gameScreen) {
-  std::string opponent_projectile_file = "opponentprojectile.bmp";
-  
-  DrawOppProjImage(opponent_projectile_file);
+  DrawOppProjImage(file);
   graphics::Image OpponentProjectile;
-  OpponentProjectile.Load(opponent_projectile_file);
+  OpponentProjectile.Load(file);
   for (int i = 0; i < kWidth_; i++){
     for (int j = 0; j < kHeight_; j++){
       graphics::Color color = OpponentProjectile.GetColor(i,j);
