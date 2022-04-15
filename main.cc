@@ -27,16 +27,16 @@ int main() {
 
   // Call each Draw member function and pass the game screen as argument
   Player goodCat(400, 300);
-  goodCat.SetFile("player.bmp");
+  goodCat.SetFile(player_image_file;);
   goodCat.Draw(gameScreen);
   Opponent evilCat(200, 300);
-  evilCat.SetFile("opponent.bmp");
+  evilCat.SetFile(opponent_image_file;);
   evilCat.Draw(gameScreen);
   PlayerProjectile PlaProj(300, 200);
-  PlaProj.SetFile("playerprojectrile.bmp");
+  PlaProj.SetFile(player_projectile_file);
   PlaProj.Draw(gameScreen);
   OpponentProjectile OppProj(500, 400);
-  OppProj.SetFile("opponentprojectile.bmp");
+  OppProj.SetFile(opponent_projectile_file);
   OppProj.Draw(gameScreen);
   gameScreen.ShowUntilClosed();
   return 0;
