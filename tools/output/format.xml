@@ -4,216 +4,40 @@
 </replacements>
 <?xml version='1.0'?>
 <replacements xml:space='preserve' incomplete_format='false'>
-<replacement offset='230' length='0'> </replacement>
-<replacement offset='231' length='0'> </replacement>
-<replacement offset='238' length='0'> </replacement>
-<replacement offset='264' length='0'> </replacement>
-<replacement offset='265' length='0'> </replacement>
-<replacement offset='272' length='0'> </replacement>
-<replacement offset='487' length='0'> </replacement>
-<replacement offset='631' length='27'> </replacement>
-<replacement offset='1150' length='3'>&#10;</replacement>
-<replacement offset='1210' length='0'> </replacement>
-<replacement offset='1211' length='1'></replacement>
-<replacement offset='1223' length='0'> </replacement>
-<replacement offset='1377' length='0'> </replacement>
-<replacement offset='1418' length='0'> </replacement>
-<replacement offset='1446' length='0'> </replacement>
-<replacement offset='1455' length='0'> </replacement>
-<replacement offset='1484' length='0'> </replacement>
-<replacement offset='1534' length='0'> </replacement>
-<replacement offset='1599' length='4'>&#10;&#10;</replacement>
-<replacement offset='1640' length='2'>&#10;</replacement>
-<replacement offset='1685' length='5'>&#10;  </replacement>
-<replacement offset='1713' length='5'>&#10;  </replacement>
-<replacement offset='1745' length='5'>&#10;  </replacement>
-<replacement offset='1778' length='5'>&#10;  </replacement>
-<replacement offset='1806' length='5'>&#10;  </replacement>
-<replacement offset='1834' length='6'>&#10;&#10;  </replacement>
-<replacement offset='1860' length='5'>&#10;  </replacement>
-<replacement offset='1903' length='5'>&#10;  </replacement>
-<replacement offset='1927' length='5'>&#10;  </replacement>
-<replacement offset='1971' length='6'>&#10;&#10;  </replacement>
-<replacement offset='1997' length='5'>&#10;  </replacement>
-<replacement offset='2033' length='5'>&#10;  </replacement>
-<replacement offset='2057' length='5'>&#10;  </replacement>
-<replacement offset='2093' length='6'>&#10;&#10;  </replacement>
-<replacement offset='2157' length='1'>&#10;           </replacement>
-<replacement offset='2267' length='5'>&#10;  </replacement>
-<replacement offset='2296' length='5'>&#10;  </replacement>
-<replacement offset='2336' length='5'>&#10;  </replacement>
-<replacement offset='2377' length='5'>&#10;  </replacement>
-<replacement offset='2413' length='5'>&#10;  </replacement>
-<replacement offset='2449' length='6'>&#10;&#10;  </replacement>
-<replacement offset='2475' length='5'>&#10;  </replacement>
-<replacement offset='2518' length='5'>&#10;  </replacement>
-<replacement offset='2542' length='5'>&#10;  </replacement>
-<replacement offset='2586' length='6'>&#10;&#10;  </replacement>
-<replacement offset='2631' length='5'>&#10;  </replacement>
-<replacement offset='2701' length='5'>&#10;  </replacement>
-<replacement offset='2744' length='5'>&#10;  </replacement>
-<replacement offset='2814' length='6'>&#10;&#10;  </replacement>
-<replacement offset='2868' length='1'>&#10;           </replacement>
-<replacement offset='2908' length='1'>&#10;           </replacement>
-<replacement offset='2948' length='1'>&#10;           </replacement>
-<replacement offset='3078' length='0'> </replacement>
-<replacement offset='3190' length='0'> </replacement>
-<replacement offset='3197' length='0'> </replacement>
-<replacement offset='3235' length='0'> </replacement>
-<replacement offset='3242' length='0'> </replacement>
-<replacement offset='3274' length='0'> </replacement>
-<replacement offset='3284' length='0'> </replacement>
-<replacement offset='3316' length='0'> </replacement>
-<replacement offset='3326' length='0'> </replacement>
-<replacement offset='3543' length='2'>&#10;  </replacement>
-<replacement offset='3612' length='2'>&#10;  </replacement>
-<replacement offset='3660' length='0'> </replacement>
-<replacement offset='3661' length='0'> </replacement>
-<replacement offset='3676' length='0'> </replacement>
-<replacement offset='3677' length='0'> </replacement>
-<replacement offset='3679' length='1'>&#10;                                    </replacement>
-<replacement offset='3692' length='0'> </replacement>
-<replacement offset='3693' length='0'> </replacement>
-<replacement offset='3707' length='2'>&#10;  </replacement>
-<replacement offset='3815' length='0'> </replacement>
-<replacement offset='3816' length='1'></replacement>
-<replacement offset='4059' length='0'> </replacement>
-<replacement offset='4099' length='0'> </replacement>
-<replacement offset='4159' length='0'> </replacement>
-<replacement offset='4279' length='5'>&#10;  </replacement>
-<replacement offset='4307' length='5'>&#10;  </replacement>
-<replacement offset='4339' length='5'>&#10;  </replacement>
-<replacement offset='4372' length='5'>&#10;  </replacement>
-<replacement offset='4400' length='5'>&#10;  </replacement>
-<replacement offset='4428' length='6'>&#10;&#10;  </replacement>
-<replacement offset='4455' length='5'>&#10;  </replacement>
-<replacement offset='4492' length='5'>&#10;  </replacement>
-<replacement offset='4517' length='5'>&#10;  </replacement>
-<replacement offset='4556' length='6'>&#10;&#10;  </replacement>
-<replacement offset='4582' length='5'>&#10;  </replacement>
-<replacement offset='4616' length='5'>&#10;  </replacement>
-<replacement offset='4640' length='5'>&#10;  </replacement>
-<replacement offset='4676' length='6'>&#10;&#10;  </replacement>
-<replacement offset='4742' length='1'>&#10;           </replacement>
+<replacement offset='57' length='59'>#include "player.h"&#10;#include "opponent.h"&#10;#include &lt;string></replacement>
+<replacement offset='1222' length='0'> </replacement>
+<replacement offset='1223' length='1'></replacement>
+<replacement offset='3826' length='0'> </replacement>
+<replacement offset='3827' length='1'></replacement>
 </replacements>
 <?xml version='1.0'?>
 <replacements xml:space='preserve' incomplete_format='false'>
-<replacement offset='121' length='0'> </replacement>
-<replacement offset='1239' length='0'> </replacement>
-<replacement offset='1240' length='1'></replacement>
-<replacement offset='1300' length='6'>&#10;&#10;  </replacement>
-<replacement offset='1430' length='0'> </replacement>
-<replacement offset='1470' length='0'> </replacement>
-<replacement offset='1522' length='0'> </replacement>
-<replacement offset='1644' length='0'> </replacement>
-<replacement offset='1762' length='0'> </replacement>
-<replacement offset='1769' length='0'> </replacement>
-<replacement offset='1809' length='0'> </replacement>
-<replacement offset='1816' length='0'> </replacement>
-<replacement offset='1850' length='0'> </replacement>
-<replacement offset='1860' length='0'> </replacement>
-<replacement offset='1894' length='0'> </replacement>
-<replacement offset='1904' length='0'> </replacement>
-<replacement offset='2060' length='0'>&#10;    </replacement>
-<replacement offset='2129' length='2'>&#10;  </replacement>
-<replacement offset='2200' length='2'>&#10;  </replacement>
-<replacement offset='2250' length='0'> </replacement>
-<replacement offset='2251' length='0'> </replacement>
-<replacement offset='2266' length='0'> </replacement>
-<replacement offset='2267' length='0'> </replacement>
-<replacement offset='2269' length='1'>&#10;                                      </replacement>
-<replacement offset='2282' length='0'> </replacement>
-<replacement offset='2283' length='0'> </replacement>
-<replacement offset='2297' length='2'>&#10;  </replacement>
-<replacement offset='2411' length='0'> </replacement>
-<replacement offset='2412' length='1'></replacement>
-<replacement offset='2493' length='6'>&#10;&#10;  </replacement>
-<replacement offset='2669' length='0'> </replacement>
-<replacement offset='2709' length='0'> </replacement>
-<replacement offset='2771' length='0'> </replacement>
+<replacement offset='1297' length='0'> </replacement>
+<replacement offset='1298' length='1'></replacement>
+<replacement offset='2489' length='0'> </replacement>
+<replacement offset='2490' length='1'></replacement>
 </replacements>
 <?xml version='1.0'?>
 <replacements xml:space='preserve' incomplete_format='false'>
 <replacement offset='87' length='76'>#include "cpputils/graphics/image.h"&#10;#include "opponent.h"&#10;#include &lt;string></replacement>
-<replacement offset='176' length='0'> </replacement>
-<replacement offset='177' length='5'>&#10;</replacement>
-<replacement offset='190' length='9'>&#10;  </replacement>
-<replacement offset='210' length='9'>&#10;  </replacement>
-<replacement offset='241' length='9'>&#10;  </replacement>
-<replacement offset='273' length='5'>&#10;&#10;</replacement>
-<replacement offset='285' length='9'>&#10;  </replacement>
-<replacement offset='303' length='9'>&#10;  </replacement>
-<replacement offset='333' length='9'>&#10;  </replacement>
-<replacement offset='359' length='9'>&#10;  </replacement>
-<replacement offset='385' length='9'>&#10;  </replacement>
-<replacement offset='405' length='9'>&#10;  </replacement>
-<replacement offset='425' length='9'>&#10;  </replacement>
-<replacement offset='449' length='9'>&#10;  </replacement>
-<replacement offset='474' length='9'>&#10;  </replacement>
-<replacement offset='535' length='9'>&#10;  </replacement>
-<replacement offset='569' length='0'> </replacement>
-<replacement offset='570' length='1'></replacement>
-<replacement offset='583' length='9'>&#10;  </replacement>
-<replacement offset='626' length='9'>&#10;  </replacement>
-<replacement offset='712' length='5'>&#10;</replacement>
-<replacement offset='725' length='5'>&#10;  </replacement>
-<replacement offset='737' length='5'>&#10;  </replacement>
-<replacement offset='749' length='5'>&#10;  </replacement>
-<replacement offset='776' length='5'>&#10;  </replacement>
-<replacement offset='804' length='5'>&#10;&#10;</replacement>
-<replacement offset='816' length='5'>&#10;  </replacement>
-<replacement offset='840' length='5'>&#10;  </replacement>
-<replacement offset='876' length='5'>&#10;  </replacement>
-<replacement offset='892' length='5'>&#10;  </replacement>
-<replacement offset='908' length='5'>&#10;  </replacement>
-<replacement offset='928' length='5'>&#10;  </replacement>
-<replacement offset='949' length='5'>&#10;  </replacement>
-<replacement offset='971' length='5'>&#10;  </replacement>
-<replacement offset='993' length='5'>&#10;  </replacement>
-<replacement offset='1056' length='5'>&#10;  </replacement>
-<replacement offset='1086' length='0'> </replacement>
-<replacement offset='1087' length='1'></replacement>
-<replacement offset='1100' length='5'>&#10;  </replacement>
-<replacement offset='1149' length='2'>&#10;</replacement>
+<replacement offset='179' length='2'>&#10;</replacement>
+<replacement offset='254' length='3'>&#10;&#10;</replacement>
+<replacement offset='542' length='0'> </replacement>
+<replacement offset='543' length='1'></replacement>
+<replacement offset='673' length='2'>&#10;</replacement>
+<replacement offset='754' length='3'>&#10;&#10;</replacement>
+<replacement offset='1068' length='0'> </replacement>
+<replacement offset='1069' length='1'></replacement>
 </replacements>
 <?xml version='1.0'?>
 <replacements xml:space='preserve' incomplete_format='false'>
-<replacement offset='111' length='5'>&#10;</replacement>
-<replacement offset='124' length='9'>&#10;  </replacement>
-<replacement offset='174' length='9'>&#10;  </replacement>
-<replacement offset='190' length='9'>&#10;  </replacement>
-<replacement offset='248' length='9'>&#10;  </replacement>
-<replacement offset='281' length='5'>&#10;&#10;</replacement>
-<replacement offset='293' length='9'>&#10;  </replacement>
-<replacement offset='313' length='9'>&#10;  </replacement>
-<replacement offset='345' length='9'>&#10;  </replacement>
-<replacement offset='366' length='9'>&#10;  </replacement>
-<replacement offset='386' length='9'>&#10;  </replacement>
-<replacement offset='406' length='9'>&#10;  </replacement>
-<replacement offset='430' length='9'>&#10;  </replacement>
-<replacement offset='455' length='9'>&#10;  </replacement>
-<replacement offset='475' length='9'>&#10;  </replacement>
-<replacement offset='501' length='9'>&#10;  </replacement>
-<replacement offset='527' length='9'>&#10;  </replacement>
-<replacement offset='587' length='9'>&#10;  </replacement>
-<replacement offset='621' length='0'> </replacement>
-<replacement offset='622' length='1'></replacement>
-<replacement offset='666' length='5'>&#10;</replacement>
-<replacement offset='679' length='5'>&#10;  </replacement>
-<replacement offset='691' length='5'>&#10;  </replacement>
-<replacement offset='703' length='5'>&#10;  </replacement>
-<replacement offset='730' length='5'>&#10;  </replacement>
-<replacement offset='758' length='5'>&#10;&#10;</replacement>
-<replacement offset='770' length='5'>&#10;  </replacement>
-<replacement offset='796' length='5'>&#10;  </replacement>
-<replacement offset='834' length='5'>&#10;  </replacement>
-<replacement offset='850' length='5'>&#10;  </replacement>
-<replacement offset='866' length='5'>&#10;  </replacement>
-<replacement offset='886' length='5'>&#10;  </replacement>
-<replacement offset='907' length='5'>&#10;  </replacement>
-<replacement offset='929' length='5'>&#10;  </replacement>
-<replacement offset='951' length='5'>&#10;  </replacement>
-<replacement offset='1016' length='5'>&#10;  </replacement>
-<replacement offset='1046' length='0'> </replacement>
-<replacement offset='1047' length='1'></replacement>
+<replacement offset='39' length='54'>#include "cpputils/graphics/image.h"&#10;#include &lt;string></replacement>
+<replacement offset='111' length='2'>&#10;</replacement>
+<replacement offset='194' length='3'>&#10;&#10;</replacement>
+<replacement offset='470' length='0'> </replacement>
+<replacement offset='471' length='1'></replacement>
+<replacement offset='515' length='2'>&#10;</replacement>
+<replacement offset='596' length='3'>&#10;&#10;</replacement>
+<replacement offset='916' length='0'> </replacement>
+<replacement offset='917' length='1'></replacement>
 </replacements>
